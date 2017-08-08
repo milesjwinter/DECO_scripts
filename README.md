@@ -1,2 +1,2 @@
 # DECO_scripts
-polished scripts for DECO analysis
+Scripts for DECO analysis
