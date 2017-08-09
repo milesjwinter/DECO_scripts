@@ -11,5 +11,7 @@ Generate an hd5f database of images and labels that can be used to train the CNN
 Base script for applying CNN predictions to new DECO images
 ## reverse_lookup.py
 Finds the country of origin for DECO events based on metadata 
+## rotated_dcgan_deco.py
+Implemention of DCGAN in TFLearn using data augmentation to generate images from a rotation invariant dataset. 
 ## zoom_predictions.py
 Updates script for applying CNN predictions to new DECO images. Designed to integrated with the nightly processing pipeline. 
