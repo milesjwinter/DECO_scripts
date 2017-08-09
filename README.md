@@ -3,6 +3,8 @@ Various analysis scripts for DECO
 
 ## Classify_plotBlobs.py
 Loads DECO images from an input directory and displays each blob above threshold. The user inputs the classification for each blob and the results are written to a text file that can be passed to make_gray_image_database.py. 
+## DECO_CNN.py
+For constructing and training the CNN
 ## Predict_Label_plotBlobs.py 
 Same idea as Classify_plotBlobs.py, but the CNN prediction is available for each blob.
 ## make_gray_image_database.py 
