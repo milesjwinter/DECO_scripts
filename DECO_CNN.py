@@ -131,7 +131,7 @@ history = model.fit_generator(datagen.flow(train_images, train_labels,
                     class_weight=class_weight,
                     validation_data=(test_images, test_labels),
                     callbacks=[checkpointer],
-                    initial_epoch=2000)
+                    initial_epoch=0)
 
 #save model weights and structure
 model.save('trained_model.h5')
