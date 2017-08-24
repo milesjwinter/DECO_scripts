@@ -6,6 +6,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Concatenate, BatchNormalization, Activation
 from keras.layers import Conv2D, MaxPooling2D, MaxoutDense, AveragePooling2D, Lambda, Cropping2D
 from keras.layers.advanced_activations import LeakyReLU
+from keras.utils import to_categorical
 from keras.models import load_model
 from keras.callbacks import ModelCheckpoint
 from keras.optimizers import SGD
@@ -34,7 +35,7 @@ def smooth_labels(y, smooth_factor):
 #model/training parameters
 batch_size = 32
 num_classes = 3 
-epochs = 6000
+epochs = 1000
 
 # input image parameters
 img_rows, img_cols = 64, 64
@@ -53,6 +54,9 @@ train_images, test_images, train_labels, test_labels = train_test_split(images,
                                                                         labels,
                                                                         train_size=0.9, 
                                                                         random_state=123)
+
+train_labels = smooth_labels(to_categorical(train_labels, num_classes),0.003)
+test_labels = to_categorical(test_labels, num_classes)
 
 f.close()
 
